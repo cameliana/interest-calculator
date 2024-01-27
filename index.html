@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Interest Calculator</h1>
+    </header>
+
+    <main>
+        <fieldset>
+            <label for="principal">Amount</label>
+            <input type="number" id="principal" aria-label="Loan Amount" required> <br/>
+
+            <label for="rate">Rate</label>
+            <span id="rate_val">10.25</span>%<br/>
+            <input type="range" id="rate" min="1" max="20" value="10.25" step="0.25" onchange="updateRate()" style="color: black;">
+            
+
+            <label for="years">No. of Years</label>
+            <input type="number" id="years" list="all_years" aria-label="Interest Term" required>
+
+            <button onclick="compute()">Calculate</button>
+        </fieldset>
+
+        
+        
+        <p><span id="result"></span></p>
+
+    </main>
+
+    <footer>
+        <p>This Calculator was created by Camelia &#169; 2023</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
